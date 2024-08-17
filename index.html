@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<link rel="stylesheet" href="style/styles.css">
+<link rel="stylesheet" href="style/mesasStyle.css">
+
+<link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--fUENTE DE TEXTO-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <header class="text-center py-2">
+        <a href="index.html">
+            <div>
+                <img src="files/svg/logo/logo-black-transparent.svg" alt="RestauPonte(nombre provicional)" type="image/svg+xml" style="max-height: 50px;height: auto; max-width: 100%;">
+            </div>
+        </a>
+    </header>
+    <nav class="navegation navbar navbar-expand-lg px-5">
+        <div class="container-fluid barra">
+            <a class="navbar-brand" href=""><img src="favicon.svg" alt="icono inicio" height="55"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-light element menu" aria-current="page" href="#">MENÚ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light element mesas" href="#">MESAS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light element nosotros">NOSOTROS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light element novedades" href="#">NOVEDADES</a>
+                    
+                </ul>
+
+                <hr>
+                
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">INICIAR SESIÓN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="registro nav-link text-light" href="#">REGISTRARSE</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+
+    <!--Contenido-->
+    <main>
+
+        <!--inicio-->
+        <div class="subcont1">
+            <div class="start text-center ">
+                <h1><strong>¡BIENVENIDO!</strong></h1>
+                <a href="#"><button class="p-4 text-light my-3"><h2 class="m-auto"><strong>REALIZA TU PEDIDO</strong></h2></button></a>
+                <!--dirección generada en "https://www.bestrandoms.com/random-address-in-co"-->
+                <h3>Av 15 No. 122-85 MEZZ 27</h3>
+            </div>
+            <div class="my-5 text-center">
+                
+                <h1 class="my-5"><strong>NUESTROS PLATOS</strong></h1>
+
+                <ul class="listFood">
+
+                    <!--Platos Carta-->
+
+                    <li class="p-3 py-5 m-5" id="contCarta">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h1><strong>CARTA</strong></h1>
+                                <p>Observa todos nuestro platos a la carta.</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <button id="carta" class="text-light p-3" >
+                                    Mirar
+                                    <i class="bi bi-hand-index-thumb"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--Platos Corriente-->
+
+                    <li class="p-3 py-5 m-5" id="contCorriente">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h1><strong>CORRIENTE</strong></h1>
+                                <p>Mira la variedad de platos corrientes, que te ofrecemos.</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <button id="corriente" class="text-light p-3">
+                                    Mirar
+                                    <i class="bi bi-hand-index-thumb"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--Platos Especiales-->
+
+                    <li class="p-3 py-5 m-5" id="contEspecial">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h1><strong>ESPECIAL</strong></h1>
+                                <p>Deleitate con nuestro excelentes platos especiales.</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <button id="especial" class="text-light p-3">
+                                    Mirar
+                                    <i class="bi bi-hand-index-thumb"></i>
+                                </button>
+                            </div>
+                        </div> 
+                    </li>
+
+                    <!--Bebidas-->
+
+                    <li class="p-3 py-5 m-5" id="contBebida">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h1><strong>BEBIDAS</strong></h1>
+                                <p>Refrescate con nuestras bebidas.</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <button id="bebida" class="text-light p-3">
+                                    Mirar
+                                    <i class="bi bi-hand-index-thumb"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class=" text-center mt-3 mb-5">
+                <h3>OBSERVA TODO NUESTRO</h3>
+                <a href="#"><button id="catalogo" class="pt-2 px-4 mb-5"><h2 class="text-light text-center">CATALOGO</h2></button></a>
+            </div>
+        </div>
+
+        <!--menú-->
+        <div class="subcont2 p-5 ">
+            <div class="text-center">
+                <h1><strong>MENÚ</strong></h1>
+            </div>
+
+            <div class="row container mb-5 text-center">
+                <div class="col-lg-4">
+                    <div>
+                        <h3>BUSCAR:</h3>
+                    </div>
+                    <div><input type="search" class="select px-2" placeholder="buscar alimento"></div>
+                </div>
+                <div class="col-lg-4 mt-3 pt-4">
+                    <button class="dropdown-toggle text-start select" data-bs-toggle="dropdown" aria-expanded="false" style="min-width: 200px;">PLATO DE COMIDA</button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">Carta</li>
+                        <li class="dropdown-item">Corriente</li>
+                        <li class="dropdown-item">Especiales</li>
+                        <hr>
+                        <li class="dropdown-item">Todos</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mt-3 pt-4">
+                    <button class="dropdown-toggle select text-start" data-bs-toggle="dropdown" aria-errormessage="false" style="min-width: 200px;">BEBIDA</button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">Bebidas Naturales</li>
+                        <li class="dropdown-item">Gaseosa</li>
+                        <hr>
+                        <li class="dropdown-item">Todos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <article class="light p-5 container-lg text-light">
+                <article class="dark p-5 shadow">
+                    <!-- contendio de los platos -->
+
+                   <div class="row">
+                       <div class="col-lg-4 text-center">
+                            <img src="files/images/food/example.jpg" alt="bandeja paisa" class="prealimento img-fluid" style="max-height: 200px; max-width: 200px;">
+                       </div>
+                       <div class="col-lg-7 my-3">
+                            <h3 class="title"><strong>COSTILLAS BBQ</strong></h3>
+                            <div class="ingredients">
+                                <ul class="listIngredients">
+                                    <li class="ingredient">arroz blanco</li>
+                                    <li class="ingredient">frijoles</li>
+                                    <li class="ingredient">plátano verde</li>
+                                    <li class="ingredient">chorizo</li>
+                                    <li class="ingredient">huevo</li>
+                                    <li class="ingredient">aguacate</li>
+                                    <li class="ingredient">carne molida</li>
+                                    <li class="ingredient">chicharrón</li>
+                                </ul>
+                            </div>
+                            <strong>VALOR: <span>$15.000</span></strong>
+                        </div>
+                        <div class="my-3 text-center">
+                            <!--Solicitar al usuario, a registrarse-->
+                            <button class="text-light p-2">REALIZAR PEDIDO</button>
+                        </div>
+                   </div> 
+                </article>
+
+                <div class="mt-5">
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                          <a class="page-link">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>    
+                </div>
+                
+            </article>
+        </div>
+        
+        <!--mesas-->
+        <div class="subcont3 p-5">
+            <article class=" container shadow text-center light p-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!--Es una imagen de guía, no representará el diseño final-->
+                        <img src="files/images/diagramRestau.png" alt="Diagrama del restaurante (imagen conceptual)" srcset="" class="img-fluid">
+                        <p>imagen saca de <a href="https://www.edrawsoft.com/es/article/restaurant-floor-plan.html">edrawsoft</a></p>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3>Estados</h3>
+                        <small>Identifique el estado de las mesas mediante el simbolo que lo acompaña.</small>
+                        <br>
+
+                        <div class="text-start mt-2 p-5">
+                            <p class="simbVacio">Mesa vacía</p>
+                            <p class="simbOcupado">Mesa ocupada</p>
+                        </div>
+
+                    </div>
+                </div>
+                
+                
+            </article>
+        </div>
+
+        <!--nosotros-->
+        <div class="subcont4">
+            <!--Contenido interno de nosotros-->
+            <article class="p-5">
+                <h1 class="text-center mb-3"><strong>NOSOTROS</strong></h1>
+                <hr>
+
+                <ul class="nav nav-tabs">
+                  <li class="nav-item tab active px-2 mx-2">
+                    HORARIO DE ATENCIÓN
+                  <li>
+                  <li class="nav-item tab px-2 mx-2">
+                    VISIÓN
+                  </li>
+                  <li class="nav-item tab px-2 mx-2">
+                    MISIÓN
+                  </li>
+                </ul>
+                <div class="navSubCont px-5 py-5">
+                    <!--Horario Atención-->
+                    <div class="navCont active">
+                        <p>Horario de atención.</p>
+                        <p>8:00 am - 6:00pm</p>
+                        <p>De lunes a sabado.</p>
+                    </div>
+
+                    <div class="navCont">
+                        <h3><strong>VISIÓN</strong></h3>
+                        <p>RestauPonte busca expandir y darse a conocer a nivel nacional en el año 2027, abriendo diferentes cadenas de restaurantes. Para el año 2030, RestauPonte espera abrir su primera cadena de restaurantes fuera de Colombia, para dar a conocer a nivel nacional el sabor de la gastronomia colombiana.</p>
+                    </div>
+
+                    <div class="navCont">
+                        <h3><strong>MISIÓN</strong></h3>
+                        <p>RestauPonte busca ofrecer alimentos de gran calidad y que sean accesible a toda la población Colombiana, además de ofrecer una excelente atención al cliente, junto a una página web que busca satisfacer las necesidades principales de los consumidores.</p>
+                    </div>
+                </div>
+                
+
+            </article>
+
+        </div>
+
+        <!--Novedades-->
+        <div class="subcont5 p-5">
+            <article class="p-5">
+                <h1><strong>NOVEDADES</strong></h1>
+
+                <div class="novedad">
+                    <div class="encabezado">
+                        <h2>PÁGINA WEB</h2>
+                    </div>
+                    <div class="cuerpo">
+                        <p>Bienvenido a la página web "RestauPonte". La página web todavía se encuentra en construcción, por lo tanto pueden existir grandes cambios referentes a esta versión con las próximas. Así que disfruta de lo que te ofrece esta pequeña web.</p>
+                    </div>
+                </div>
+                
+            </article>
+        </div>
+    </main>
+    <footer class="container-fluid pt-4">
+        <div class="row">
+            <div class="col-lg-7">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15907.857650163445!2d-74.22926505!3d4.600397149999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1718917155233!5m2!1ses-419!2sco" 
+                    style="border:0;" 
+                    allowfullscreen="true" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class=" mt-2 container-fluid">
+                </iframe>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h2><strong>CONTACTANOS</strong></h2>
+
+                <hr>
+
+                <!--Los números no son reales, son generados en "https://www.datexco.com/tools/numeros-aleatorios"-->
+
+                <p><small><i class="bi bi-whatsapp"></i><strong> Whatsapp:</strong> 3764543505</small></p>
+                <p><small><i class="bi bi-telephone-fill"></i><strong> Número fijo:</strong> 601-8402358</small></p>
+                <p><small><i class="bi bi-envelope-at-fill"></i><strong> Correo Electrónico:</strong> restauponte@restauponte.com</small></p>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+    <script src="script/pages.js"></script>
+    <script src="script/changeCont.js"></script>
+    <script src="script/nosotrosTabs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

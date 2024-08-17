@@ -1,0 +1,228 @@
+body{
+    background-color: #ede7f6;
+    font-family: "Akshar", sans-serif;
+    font-size: 20px;
+    
+}
+
+header{
+    background-color: #e0a1f0;
+}
+
+    .titulo{
+        text-decoration: none;
+        color: black;
+    }
+
+nav.navegation{
+    background-color: #8e24aa;
+}
+
+    .barra > * a{
+        transition: all 0.8s;
+    }
+
+    .barra > * a:hover{
+        border-radius: 15px;
+        text-shadow: 0 0 15px lightpink;
+        transition: all 0.4s;
+    }
+
+    .light{
+        background-color: #716fff;
+    }
+
+    .dark{
+        background-color: #2a295b;
+    }
+    
+
+.subcont1{
+    display: inline;
+    padding: 0 20px;
+}
+
+    .listFood{
+        list-style-type: none;
+        color: white;
+    }
+
+    .listFood>li{
+        border-radius: 15px;
+        box-shadow: 0 0 15px gray;
+    }
+
+    .listFood div{
+        margin: auto;
+    }
+
+    #contCarta{
+        background-image: linear-gradient(to right, rgba(113,111,255,0.3),rgba(113,111,255,1)), url(../files/images/banners/carta.jpg);
+        background-size: cover;
+    }
+
+    #contCorriente{
+        background-image: linear-gradient(to right, rgba(42,41,91,0.3),rgba(42,41,91,1)), url(../files/images/banners/corriente.jpg);
+        background-size: cover;
+    }
+
+    #contEspecial{
+        background-image: linear-gradient(to right, rgba(113,111,255,0.3),rgba(113,111,255,1)), url(../files/images/banners/especial.jpg);
+        background-size: cover;
+    }
+
+    #contBebida{
+        background-image: linear-gradient(to right, rgba(42,41,91,0.3),rgba(42,41,91,1)), url(../files/images/banners/bebida.jpg);
+        background-size: cover;
+    }
+
+
+div.start{
+    margin: 10vh 0 23vh 0;
+}
+
+.subcont2{
+    display: none;
+}
+
+    .prealimento{
+        width: fit-content;
+        height: fit-content;
+        object-fit: cover;
+    }
+
+    .preFood{
+        width: 200px;
+        height: fit-content;
+        object-fit: cover;
+    }
+
+    .listIngredients{
+        list-style: none;
+    }
+
+    .ingredient{
+        display: inline;
+    }
+
+    .ingredient::before{
+        content: "";
+        margin: 0 15px;
+    }
+
+
+.subcont3{
+    display: none;
+}
+.subcont4{
+    display: none;
+}
+    
+    .tab{
+        transition: all 0.5s ease;
+    }
+
+    .tab.active{
+        background-color:#8e24aa;
+        border-radius: 5px 5px 0 0;
+        color: white;
+        transition: all 0.5s ease;
+    }
+
+    .navCont{
+        display: none;
+    }
+
+    .navCont.active{
+        display: inline;
+    }
+
+.subcont5{
+    display: none;
+}
+
+    .subcont5 > article > h1{
+        text-align: center;
+    }
+
+   .novedad{
+    margin: 15vh 0;
+    color: white;
+    border-radius: 15px;
+    background-color: #716ddfff;
+    box-shadow: 0 0 15px gray;
+   } 
+
+   .encabezado{
+    padding: 5vh;
+    border-radius: 10px 10px 0 0;
+    background-color: #2a295b;
+   }
+
+   .cuerpo{
+    padding: 10vh 5vh;
+   }
+
+footer{
+    background-color: #e0a1f0;
+}
+
+h1{
+}
+
+h2{
+}
+
+h3{
+}
+
+p{
+}
+
+object{
+    pointer-events: all;
+}
+
+.registro{
+    background-color: #470458;
+    border-radius: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.7s;
+}
+
+button{
+    border-radius: 15px;
+    border: solid 0;
+    background-color:#8e24aa;
+    transition: all 0.4s;
+}
+
+button:hover{
+    background-color: #b246f2;
+    transition: all 0.4s;
+}
+
+button:active{
+   background-color: #830cc4;
+   transform:translateY(3px);
+}
+
+iframe{
+    border-radius: 15px;
+
+    width: 600px;
+    height:300px;
+}
+
+.select {
+    background-color: #e0a1f0;
+        border-radius: 15px;
+        border: 0 solid;
+}
+article{
+        border-radius: 15px;
+}
