@@ -54,19 +54,3 @@ $catalogo.addEventListener("click", e => {
     document.querySelector(".subcont2").style.display = "inline";
 });
 
-/*let $alimento = document.querySelectorAll(".alimento");
-
-$alimento.forEach((element,i) => {
-    $alimento[i].addEventListener("click", e =>{
-        document.querySelector(".subcont1").style.display = "none";
-        if(e.target.matches(".especial")){
-            document.querySelector(".subcont2").style.display = "inline";
-        }  else if(e.target.matches("#carta")){
-            document.querySelector(".subcont2").style.display = "inline";
-        }  else if(e.target.matches(".corriente")){
-            document.querySelector(".subcont2").style.display = "inline";
-        }  else if(e.target.matches(".bebida")){
-            document.querySelector(".subcont2").style.display = "inline";
-        }
-    })
-})*/
