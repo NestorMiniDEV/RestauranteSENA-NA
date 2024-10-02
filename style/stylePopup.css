@@ -1,0 +1,19 @@
+dialog  {
+    opacity: 1;
+    border: 0;
+    transform: scale(1);
+    transition: all .5s;
+    background-color: #ede7f6;
+}
+
+@starting-style  {
+    dialog[open] {
+        opacity: 0;
+        transform: scale(.5);
+        transition: all 1s;
+    }
+}
+
+#count {
+    width: 250px;
+}

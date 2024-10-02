@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante</title>
 
+    <!--Bootstrap-->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!--Styles-->
 <link rel="stylesheet" href="style/styles.css">
 <link rel="stylesheet" href="style/mesasStyle.css">
 
 <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!--fUENTE DE TEXTO-->
 
@@ -39,17 +40,26 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link text-light element menu" aria-current="page" href="#">MENÚ</a>
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-light element menu bi bi-book-fill" href="#">
+                        MENÚ
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light element mesas" href="#">MESAS</a>
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-light element mesas bi bi-chevron-bar-up" href="#">
+                        MESAS
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light element nosotros">NOSOTROS</a>
+                <li class="nav-item mx-2">
+                    <a href="#" class="nav-link text-light element nosotros bi bi-building-fill">
+                        <i class=""></i>
+                        NOSOTROS
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light element novedades" href="#">NOVEDADES</a>
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-light element novedades bi bi-calendar-fill" href="#">
+                        NOVEDADES
+                    </a>
                     
                 </ul>
 
@@ -57,10 +67,10 @@
                 
                 <ul class="navbar-nav text-center">
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="session.html">INICIAR SESIÓN</a>
+                        <a class="nav-link text-light" href="signin.html">INICIAR SESIÓN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="registro nav-link text-light" href="session.html">REGISTRARSE</a>
+                        <a class="registro nav-link text-light" href="signup.html">REGISTRARSE</a>
                     </li>
                 </ul>
             </div>
@@ -237,7 +247,7 @@
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item">
-                          <a class="page-link" href="#">Next</a>
+                          <a class="page-link text-primary" href="#">Next</a>
                         </li>
                       </ul>
                     </nav>    
@@ -247,29 +257,33 @@
         </div>
         
         <!--mesas-->
-        <div class="subcont3 p-5">
-            <article class=" container shadow text-center light p-5">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!--Es una imagen de guía, no representará el diseño final-->
-                        <img src="files/images/diagramRestau.png" alt="Diagrama del restaurante (imagen conceptual)" srcset="" class="img-fluid">
-                        <p>imagen saca de <a href="https://www.edrawsoft.com/es/article/restaurant-floor-plan.html">edrawsoft</a></p>
+        <div class="text-center subcont3 p-5">
+            <h1 class="text-center"><strong>MESAS</strong></h1>
+            <div class="container-fluid">
+                <div class="row my-5">
+                    <div class="col-lg-6 text-lg-end">
+                        MESAS OCUPADAS: <span><strong>x</strong></span>
                     </div>
-                    <div class="col-lg-6">
-                        <h3>Estados</h3>
-                        <small>Identifique el estado de las mesas mediante el simbolo que lo acompaña.</small>
-                        <br>
-
-                        <div class="text-start mt-2 p-5">
-                            <p class="simbVacio">Mesa vacía</p>
-                            <p class="simbOcupado">Mesa ocupada</p>
-                        </div>
-
+                    <div class="col-lg-6 text-lg-start">
+                        MESAS VACÍAS: <span><strong>x</strong></span>
                     </div>
                 </div>
-                
-                
-            </article>
+                <div class="row px-5">
+                    <div class="col-6">
+                        <span class="simbVacio">Mesa vacía</span>
+                    </div>
+    
+                    <div class="col-6">
+                        <span class="simbOcupado">Mesa ocupada</span>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="p-3 mt-3">
+                <!--Es una imagen de guía, no representará el diseño final-->
+                <img src="files/images/diagramRestau.png" alt="Diagrama del restaurante (imagen conceptual)" srcset="" class="img-fluid">
+                <p>imagen saca de <a href="https://www.edrawsoft.com/es/article/restaurant-floor-plan.html">edrawsoft</a></p>
+            </div>
         </div>
 
         <!--nosotros-->

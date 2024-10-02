@@ -1,0 +1,23 @@
+.adviceCount {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(.3);
+    transition: all .5s;
+}
+
+.adviceCount.active {
+    visibility: visible;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .5s;
+}
+
+#count .adviceCount{
+    transition: all 1s;
+}
+
+#count .adviceCount.active {
+    transition: all 1s;
+}

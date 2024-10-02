@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,8 +7,10 @@
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/stylePopup.css">
 
     <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,21 +20,341 @@
 </head>
 <body>
     <header class="text-center py-2">
-        <a href="index.html">
-            <img src="files/svg/logo/logo-black-transparent.svg" alt="" class="p-2 p-lg-1" style="max-height: 50px; min-height: auto; width: 100%;">
+        <a href="menu.html">
+            <img src="files/svg/logo/logo-black-transparent.svg" alt="RestauPonte(nombre provicional)" class="p-2 p-lg-1" style="max-height: 50px; min-height: auto; width: 100%;">
         </a>
     </header>
-    <nav class="navegation">
-        <ul class="nav">
-            <li class="nav-item"><a href="index.html">Cerrar Sesión</a></li>
-        </ul>
+
+    <nav class="navegation barra navbar navbar-expand">
+        <div class="container-fluid">
+            <div class="navbar-collapse ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item text-center">
+                        <a href="menu.html" class="nav-link text-white">
+                            <div class="row">
+                                <div class="col-lg-auto">
+                                    <i class="bi bi-book-fill"></i>
+                                </div>
+                                <div class="col-lg-auto">MENÚ</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a href="novedades.html" class="nav-link text-white">
+                            <div class="row">
+                                <div class="col-lg-auto">
+                                    <i class="bi bi-calendar-fill"></i>
+                                </div>
+                                <div class="col-lg-auto">NOVEDADES</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a href="pedidos.html" class="nav-link text-white">
+                            <div class="row">
+                                <div class="col-lg-auto">
+                                    <i class="bi bi-cart-fill"></i>
+                                </div>
+                                <div class="col-lg-auto">PEDIDOS</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-item dropdown text-white ms-5 me-lg-5">
+                <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                </div>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <a href="user.html" class="dropdown-item text-dark">DATOS PERSONALES</a>
+
+                        <hr>
+
+                        <a href="index.html" class="dropdown-item text-dark">CERRAR SESIÓN</a>
+                    </ul>
+                
+            </div>
+        </div>
     </nav>
-    <main class="py-2">
-        Hola soy el main
+
+    <main class="py-5 px-5 m-4">
+        <div class="row mb-5">
+            <div class="col-lg-3 text-center">
+                <i class="bi bi-person-circle" style="font-size: 120px;"></i>
+            </div>
+            <div class="col-lg-auto">
+                <span><strong>[nombre del usuario]</strong></span>
+                <p>Estado: <span>xx</span></p>
+            </div>
+        </div>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>DATOS PERSONALES</strong>
+                    </button>
+                </h2>
+                <div class="accordion-collapse collapse show" id="collapseOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body py-5">
+                        <ul>
+                            <li class="row">
+                                <div class="col-lg-3">
+                                    Número de documento: 
+                                </div>
+                                <div class="col-lg-auto">
+                                    <span>xx</span>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-lg-3">
+                                    Apellido del usuario:
+                                </div>
+                                <div class="col-lg-auto">
+                                    <span>x</span>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-lg-3">
+                                    Fecha de nacimiento:
+                                </div>
+                                <div class="col-lg-auto">
+                                    <span>x/x/x</span>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-lg-3">
+                                    Correo electrónico:
+                                </div>
+                                <div class="col-lg-auto">
+                                    <span>x@xx.com</span>
+                                </div>
+                            </li>
+                            <hr>
+                            <li class="row">
+                                <div class="col-lg-3">
+                                    Ubicación de la mesa:
+                                </div>
+                                <div class="col-lg-auto">
+                                    <span>mesa no asignada</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <strong>ACTUALIZAR DATOS</strong>
+                    </button>
+                </h2>
+
+                <!--Actualización de datos-->
+                <div class="accordion-collapse collapse" id="collapseTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body py-5">
+                    <form action="/update" method="post">
+                            <div class="row mb-3">
+                                <div class="col-lg-4 text-center">
+                                    <label> 
+                                        <strong>NÚMERO DE DOCUMENTO:</strong>
+                                    </label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="number" class="form-control" disabled>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-4 text-center">
+                                    <label for="newName">
+                                        <strong>NOMBRE DEL USUARIO:</strong>
+                                    </label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="text" id="newName" name="newName" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-4 text-center">
+                                    <label for="newLastName">
+                                        <strong>APELLIDO DEL USUARIO:</strong>
+                                    </label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="text" id="newLastName" name="newLastName" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-4 text-center">
+                                    <label for="newEmail">
+                                        <strong>CORREO ELECTRÓNICO:</strong>
+                                    </label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="email" id="newEmail" name="newEmail" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-4 text-center">
+                                    <label for="newNumber">
+                                        <strong>NÚMERO DE TELÉFONO:</strong>
+                                    </label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="number" id="newNumber" name="newNumber" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-lg-4 text-center">
+                                    <label>
+                                        <strong>FECHA DE NACIMIENTO:</strong>
+                                    </label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="date" class="form-control" disabled>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <p class="text-center mt-5">Ingrese su número de documento para confirmar los cambios.</p>
+                            <div class="row mt-3">
+                                <div class="col-lg-4 text-center mt-3">
+                                    <label for="confirmDocument">
+                                        <strong>NÚMERO DE DOCUMENTO:</strong>
+                                    </label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="number" id="confirmDocument" name="confirmDocument" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button class="p-3 mt-3 text-center text-white">ACTUALIZAR DATOS</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>CAMBIAR CONTRASEÑA</strong>
+                    </button>
+                </h2>
+
+                <!--Cambio de contraseña-->
+                <div class="accordion-collapse collapse" id="collapseThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body py-5">
+                        <form action="/changePass" method="post">
+                            <div class="row mb-3">
+                                <div class="col-lg-4 text-center">
+                                    <label for="lastPassword">
+                                        <strong>CONTRASEÑA ANTIGUA:</strong>
+                                    </label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="password" id="lastPassword" name="lastPassword" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-4 text-center">
+                                    <label for="newPassword">
+                                        <strong>CONTRASEÑA NUEVA:</strong>
+                                    </label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="password" id="newPassword" name="newPassword" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-4 text-center">
+                                    <label for="confirmNewPassword">
+                                        <strong>CONFIRMACIÓN DE CONTRASEÑA:</strong>
+                                    </label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="password" id="confirmNewPassword" name="confirmNewPassword" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-5">
+                                <button class="text-light p-3">REALIZAR CAMBIO</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <strong>ELIMINAR CUENTA</strong>
+                    </button>
+                </h2>
+
+                <!--Eliminar cuenta-->
+                <div class="accordion-collapse collapse" id="collapseFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body py-5 text-center">
+                        <p class="text-center">¿Está seguro de eliminar la cuenta? Recuerde que con la cuenta eliminada, ya no podrá ingresar nuevamente a esta misma cuenta.</p>
+                        <button class="btn btn-danger p-3" onclick="openDeletePP()">
+                            ELIMINAR CUENTA
+                        </button>
+                        <dialog id="deleteConf" class="rounded shadow-lg p-5">
+                            <form action="/delete" method="post">
+                                <p>Si estas seguro de eliminar esta cuenta, ingrese su número de documento para confirma la eliminación de la cuenta.</p>
+                                <div class="row mt-4">
+                                    <div class="col-lg-4 text-center">
+                                        <label for="document">
+                                            <strong>NÚMERO DE DOCUMENTO:</strong>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <input type="number" id="document" name="document" class="form-control" required>
+                                    </div>
+                                </div>
+    
+                                <div class="text-center mt-5">
+                                    <button class="btn btn-danger p-3">ELIMINAR CUENTA</button>
+                                </div>
+                            </form>
+                            <button class="p-3 text-light text-center" onclick="closeDeletePP()">VOLVER</button>
+                        </dialog>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
     </main>
-    <footer>
-        Hola soy el footer
+    <footer class="container-fluid pt-4">
+        <div class="row">
+            <div class="col-lg-7">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15907.857650163445!2d-74.22926505!3d4.600397149999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1718917155233!5m2!1ses-419!2sco" 
+                    style="border:0;" 
+                    allowfullscreen="true" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class=" mt-2 container-fluid">
+                </iframe>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h2><strong>CONTACTANOS</strong></h2>
+
+                <hr>
+
+                <!--Los números no son reales, son generados en "https://www.datexco.com/tools/numeros-aleatorios"-->
+
+                <p><small><i class="bi bi-whatsapp"></i><strong> Whatsapp:</strong> 3764543505</small></p>
+                <p><small><i class="bi bi-telephone-fill"></i><strong> Número fijo:</strong> 601-8402358</small></p>
+                <p><small><i class="bi bi-envelope-at-fill"></i><strong> Correo Electrónico:</strong> restauponte@restauponte.com</small></p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script/popups.js"></script>
 
     <!--Bootstrap script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
