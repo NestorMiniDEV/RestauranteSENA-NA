@@ -1,0 +1,108 @@
+<main class="py-5">
+	<div class="container-fluid">
+	    <article class="p-5">
+	      <h1 class="text-center"><strong>NOVEDADES</strong></h1>
+
+{{!-- Content only for admins --}}
+
+	      <button onclick="openToolsNew()" class="p-3 mb-4 text-light btn-primary">HERRAMIENTAS DE NOVEDADES</button>
+
+	      <dialog id="newsTools" class="text-center shadow-lg rounded">
+	        <h3>HERRAMIENTAS DE ADMINISTRADOR</h3>
+	        <div class="my-3">
+	          <button onclick="openAddNew()" class="p-2 me-2 text-light btn-primary">AGREGAR
+	            NOVEDAD</button>
+	          <button onclick="openEditNew()" class="p-2 ms-2 text-light btn-primary">MODIFICAR
+	            NOVEDAD</button>
+	        </div>
+	        <button onclick="closeToolsNew()" class="p-2 text-light btn btn-danger">VOLVER</button>
+	      </dialog>
+
+	      <dialog id="addNews" class="text-center shadow-lg rounded">
+	        <div class="text-start">
+	          <span onclick="closeAddNew()" class="btn-close" type="button"></span>
+	        </div>
+	        <div class="container-fluid">
+	          <h3>AGREGAR NOVEDAD</h3>
+	          <hr />
+	          <form action="/new/create" method="post">
+	            <div class="container">
+	              <div class="my-3">
+	                <label for="title_new">TITULO DE LA NOVEDAD</label>
+	                <input
+	                  type="text"
+	                  name="title_new"
+	                  id="title_new"
+	                  class="form-control"
+	                  required
+	                />
+	              </div>
+	              <div class="mb-3">
+	                <label for="description_new">DESCRIPCIÓN</label>
+	                <textarea
+	                  name="description_new"
+	                  id="description_new"
+	                  class="form-control"
+	                  style="min-height: 200px; min-width: 500px;"
+	                  required
+	                ></textarea>
+	              </div>
+	            </div>
+	            <button type="submit" class="mb-2 p-2 text-light btn-primary">AGREGAR</button>
+	          </form>
+	        </div>
+	      </dialog>
+
+	      <dialog id="editNews" class="text-center shadow-lg rounded" style="min-width: 800px;">
+	        <div class="text-start">
+	          <span onclick="closeEditNew()" class="btn-close" type="button"></span>
+	        </div>
+	        <div class="my-3">
+	          <h3>MODIFICAR NOVEDADES</h3>
+	        </div>
+	        <hr>
+	        {{#each resultNew}}
+	          <div class="container-fluid shadow my-5 py-4 px-4">
+	              <div class="row">
+	                <div class="col-lg-7">
+	                  <h3>{{title_new}}</h3>
+	                  <p><small>{{description_new}}</small></p>
+	                  <p class="text-secondary"><small>{{timeago created_at}}</small></p>
+	                </div>
+	                <div class="col-lg-4 text-center">
+	                  <a href="/new/remove/{{id_new}}" class="btn btn-danger">ELIMINAR NOVEDAD</a>
+	                  <br>
+	                  <a href="/new/edit/{{id_new}}" class="btn btn-primary shadow my-5">EDITAR NOVEDAD</a>
+	                </div>
+	              </div>
+	          </div>
+
+	          {{else}}
+
+	          <h1><strong>NO HAY NOVEDADES CREADAS.</strong></h1>
+	        {{/each}}
+	      </dialog>
+
+{{!-- content for all users --}}
+
+		  {{#each resultNew}}
+	        <div class="novedad mb-5">
+	          <div class="encabezado">
+	            <h2>{{title_new}}</h2>
+	          </div>
+	          <div class="cuerpo">
+	            <p>{{description_new}}</p>
+	          </div>
+	          <div class="piepagina">
+	            <small>{{timeago created_at}}</small>
+	          </div>
+	        </div>
+
+	        {{else}}
+
+	        <h1><strong>NO HAY NOVEDADES</strong></h1>
+	      {{/each}}
+	        
+	    </article>
+	</div>
+</main>

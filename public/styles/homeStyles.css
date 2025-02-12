@@ -1,0 +1,33 @@
+.listFood{
+        list-style-type: none;
+        color: white;
+    }
+
+.listFood>li{
+    border-radius: 15px;
+    box-shadow: 0 0 15px gray;
+}
+
+.listFood div{
+    margin: auto;
+}
+
+#contCarta{
+    background-image: linear-gradient(to right, rgba(113,111,255,0.3),rgba(113,111,255,1)), url(../files/images/banners/carta.jpg);
+    background-size: cover;
+}
+
+#contCorriente{
+    background-image: linear-gradient(to right, rgba(42,41,91,0.3),rgba(42,41,91,1)), url(../files/images/banners/corriente.jpg);
+    background-size: cover;
+}
+
+#contEspecial{
+    background-image: linear-gradient(to right, rgba(113,111,255,0.3),rgba(113,111,255,1)), url(../files/images/banners/especial.jpg);
+    background-size: cover;
+}
+
+#contBebida{
+    background-image: linear-gradient(to right, rgba(42,41,91,0.3),rgba(42,41,91,1)), url(../files/images/banners/bebida.jpg);
+    background-size: cover;
+}

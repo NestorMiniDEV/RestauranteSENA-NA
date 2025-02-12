@@ -1,0 +1,18 @@
+.tab {
+	transition: ease-in .5 ease;
+}
+
+.tab.active {
+	background-color:#8e24aa;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.navCont {
+	display: none;
+}
+
+.navCont.active {
+	display: inline;
+}

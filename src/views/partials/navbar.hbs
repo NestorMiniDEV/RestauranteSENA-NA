@@ -1,0 +1,109 @@
+    {{#if user}}
+    <header class="text-center py-2">
+        <a href="/food">
+            <div>
+                <img src="files/svg/logo/logo-black-transparent.svg" class="p-2 p-lg-1" alt="RestauPonte(nombre provicional)" type="image/svg+xml" style="max-height: 50px;height: auto; max-width: 100%;">
+            </div>
+        </a>
+    </header>
+
+    <nav class="navegation barra navbar navbar-expand ">
+        <div class="container-fluid">
+            <div class="navbar-collapse ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item text-center">
+                        <a href="/food" class="nav-link text-white">
+                            <div class="row">
+                                <div class="col-lg-auto">
+                                    <i class="bi bi-book-fill"></i>
+                                </div>
+                                <div class="col-lg-auto">MENÚ</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a href="/new" class="nav-link text-white">
+                            <div class="row">
+                                <div class="col-lg-auto">
+                                    <i class="bi bi-calendar-fill"></i>
+                                </div>
+                                <div class="col-lg-auto">NOVEDADES</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a href="/orders" class="nav-link text-white">
+                            <div class="row">
+                                <div class="col-lg-auto">
+                                    <i class="bi bi-cart-fill"></i>
+                                </div>
+                                <div class="col-lg-auto">PEDIDOS</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-item dropdown text-white ms-5 me-lg-5">
+                <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                </div>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <a href="/user" class="dropdown-item text-dark">DATOS PERSONALES</a>
+                        <hr>
+                        <a href="/logout" class="dropdown-item text-dark">CERRAR SESIÓN</a>
+                    </ul>
+                
+            </div>
+        </div>
+    </nav>
+    {{else}}
+
+    <header class="text-center py-2">
+        <a href="/">
+            <div>
+                <img src="files/svg/logo/logo-black-transparent.svg" class="p-2 p-lg-1" alt="RestauPonte(nombre provicional)" type="image/svg+xml" style="max-height: 50px;height: auto; max-width: 100%;">
+            </div>
+        </a>
+    </header>
+
+    <nav class="navbar navbar-expand-lg px-5">
+        <div class="container-fluid bar">
+            <a class="navbar-brand" href="/"><img src="favicon.svg" alt="icono inicio" height="55"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-light element menu bi bi-book-fill" href="/food">
+                        MENÚ
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-light element mesas bi bi-chevron-bar-up" href="/boards">
+                        MESAS
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a href="/company" class="nav-link text-light element nosotros bi bi-building-fill">
+                        NOSOTROS
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-light element novedades bi bi-calendar-fill" href="/new">
+                        NOVEDADES
+                    </a>
+                    
+                </ul>
+
+                <hr>
+                
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/validation">INGRESAR CUENTA</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+    {{/if}}

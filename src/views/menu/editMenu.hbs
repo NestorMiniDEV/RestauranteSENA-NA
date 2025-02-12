@@ -1,0 +1,42 @@
+<main>
+    <div class="container text-center shadow-lg p-5 my-5 m-auto rounded">
+        <h3>EDITAR ALIMENTO</h3>
+        <hr>
+        {{#each valuesFood}}
+        <form action="/food/edit/confirm/{{id_food}}" method="post" enctype="multipart/form-data">
+            <div class="container-fluid text-center">
+                    <input type="file" name="foodImage" id="foodImage" accept="image/*">
+                    <div class="my-3">
+                        <label for="name_food">NOMBRE DEL ALIMENTO</label>
+                        <input type="text" name="name_food" id="name_food" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ingredients">INGREDIENTES</label>
+                        <br>
+                        <small>*cada ingrediente debe de estar separado por una coma</small> 
+                        <br>
+                        <input type="text" name="ingredients" id="ingredients" placeholder="ejemplo: arroz , papa , carne molida" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name_typeFood">TIPO DE ALIMENTO</label>
+                        <select name="name_typeFood" id="name_typeFood" class="form-control" required>
+                            <option value="Carta">Carta</option>
+                            <option value="Corriente">Corriente</option>
+                            <option value="Especial">Especial</option>
+                            <option value="Bebida natural">Bebida natural</option>
+                            <option value="Bebida gaseosa">Bebida gaseosa</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="value_food">VALOR</label>
+                        <input type="number" name="value_food" id="value_food" class="form-control" required>
+                    </div>
+                </div>
+            <button type="submit" class="mb-2 p-2 text-light btn-primary">CAMBIAR</button>
+        </form>
+        {{/each}}
+        <form action="/food">
+            <button type="submit" class="mb-2 p-2 text-light btn btn-danger">VOLVER</button>
+        </form>
+    </div>
+</main>

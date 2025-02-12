@@ -1,0 +1,103 @@
+<main class="py-5">
+	<div class="container-fluid">
+		<div class="row validationContainer light p-5 m-5">
+			<div class="col-6 text-end pe-5">
+				<button class="selectionBtn dark signup">
+					<span class="bi bi-book-fill" style="font-size: 30px;"/>
+					<h2>CREAR CUENTA</h2>
+				</button>
+			</div>
+			<div class="col-6 text-start ps-5">
+				<button class="selectionBtn dark signin">
+					<span class="bi bi-book-fill" style="font-size: 30px;"/>
+					<h2>INGRESAR CON TU CUENTA</h2>
+				</button>
+			</div>
+		</div>
+
+	{{!-- Inicio de sesión --}}
+		<dialog class="light validationContainer signinPopup">
+			<h1>
+				INGRESAR CON TU CUENTA
+			</h1>
+
+			<form action="/signin" method="post">
+				<div>
+					<label for="idUser">NÚMERO DE DOCUMENTO</label>
+					<input type="number" name="document_user" id="idUser" class="form-control" placeholder="Ingrese su número de documento" required>
+				</div>
+				<div>
+					<label for="passwordUser">CONTRASEÑA</label>
+					<input type="password" name="password_user" id="passwordUser" class="form-control" placeholder="Ingrese su contraseña" required>
+				</div>
+
+				<button class="btn-primary text-white p-2 my-3">
+					Iniciar sesión
+				</button>
+			</form>
+
+				<button class="closeSignin btn btn-danger text-white p-2">
+					Cerrar ventana
+				</button>
+		</dialog>
+
+	{{!-- Registrar cuenta --}}
+		<dialog class="light validationContainer signupPopup">
+			<h1>
+				CREAR CUENTA
+			</h1>
+
+			<form action="/signup" method="post">
+				<div>
+					<label for="userId">DOCUMENTO</label>
+					<input type="number" name="document_user" id="userId" class="form-control" placeholder="Ingrese su número de documento" required>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<label for="nameUser">NOMBRE</label>
+						<input type="text" name="first_name" id="nameUser" class="form-control" required>
+					</div>
+					<div class="col-sm-6">
+						<label for="lastNameUser">APELLIDO</label>
+						<input type="text" name="last_name" id="lastNameUser" class="form-control" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<label for="bornDate">FECHA DE NACIMIENTO</label>
+						<input type="date" name="born_year" id="bornDate" class="form-control" required>
+					</div>
+					<div class="col-sm-6">
+						<label for="">NÚMERO DE TELÉFONO</label>
+						<input type="number" name="phonenumber" id="phoneUser" class="form-control"  required>
+					</div>
+				</div>
+
+				<div>
+					<label for="emailUser">CORREO ELECTRÓNICO</label>
+					<input type="email" name="email_address" id="emailUser" class="form-control" placeholder="example@gmail.com" required>
+				</div>
+
+				<div>
+					<label for="passwordUser">CONTRASEÑA</label>
+					<input type="password" name="password_user" id="passwordUser" class="form-control" placeholder="Ingrese su contraseña" required>
+				</div>
+
+				<div>
+					<label for="confirmationPassword">CONFIRMAR CONTRASEÑA</label>
+					<input type="password" name="" id="confirmationPassword" class="form-control" placeholder="Ingrese nuevamente su contraseña" required>
+				</div>
+
+
+				<button class="btn-primary text-white p-2 my-3">
+					Crear cuenta
+				</button>
+			</form>
+
+				<button class="closeSignup btn btn-danger text-white p-2">
+					Cerrar ventana
+				</button>
+		</dialog>
+	</div>
+
+</main>

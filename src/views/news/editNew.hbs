@@ -1,0 +1,38 @@
+<main>
+    <div class="container text-center shadow-lg p-5 my-5 m-auto rounded" style="width: fit-content;">
+        <h3>AGREGAR NOVEDAD</h3>
+        <hr />
+        {{#each valuesNew}}
+            <form action="/new/edit/confirm/{{id_new}}" method="post">
+            <div class="container-fluid">
+                <div class="my-3">
+                <label for="title_new">EDITAR NOVEDAD</label>
+                <input
+                    type="text"
+                    name="title_new"
+                    id="title_new"
+                    value="{{title_new}}"
+                    class="form-control"
+                    required
+                />
+                </div>
+                <div class="mb-3">
+                <label for="description_new">DESCRIPCIÓN</label>
+                <textarea
+                    name="description_new"
+                    id="description_new"
+                    class="form-control"
+                    style="min-height: 200px; min-width: 500px;"
+                    required
+                >{{description_new}}</textarea>
+                </div>
+            </div>
+            <a href=""></a>
+            <button type="submit" class="mb-2 p-2 text-light btn-primary">MODIFICAR</button>
+            </form>
+        {{/each}}
+        <form action="/new">
+            <button class="p-2 text-light btn btn-danger">VOLVER</button>
+        </form>
+    </div>
+</main>

@@ -1,0 +1,29 @@
+.selectionBtn {
+    color: #fff;
+    border: solid 0;
+    padding: 10px 15px;
+    border-radius: 11px;
+    max-width: 250px;
+    box-shadow: 0 0 10px #000;
+    transition: ease-out .1s;
+}
+
+.selectionBtn:active {
+    transform: scale(0.95);
+    background-color: #0009;
+    transition: ease-out .1s;
+}
+
+.validationContainer {
+    border-radius: 11px;
+    border: solid 0;
+    box-shadow: 0 0 15px #0007;
+}
+
+.signupPopup {
+    transition: ease-in-out .5s;
+}
+
+.signinPopup {
+    transition: ease-in-out .5s;
+}

@@ -1,0 +1,174 @@
+<main class="py-5">
+    <div class="container-fluid">
+        <div class="text-center">
+            <h1><strong>MENÚ</strong></h1>
+        </div>
+        <div class="row container mb-5 text-center">
+            <div class="col-lg-4">
+                <div>
+                    <h3>BUSCAR:</h3>
+                </div>
+                <div><input type="search" class="select px-2" placeholder="buscar alimento"></div>
+            </div>
+            <div class="col-lg-4 mt-3 pt-4">
+                <button class="dropdown-toggle text-start select" data-bs-toggle="dropdown" aria-expanded="false" style="min-width: 200px;">PLATO DE COMIDA</button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">Carta</li>
+                    <li class="dropdown-item">Corriente</li>
+                    <li class="dropdown-item">Especiales</li>
+                    <hr>
+                    <li class="dropdown-item">Todos</li>
+                </ul>
+            </div>
+            <div class="col-lg-4 mt-3 pt-4">
+                <button class="dropdown-toggle select text-start" data-bs-toggle="dropdown" aria-errormessage="false" style="min-width: 200px;">BEBIDA</button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">Bebidas Naturales</li>
+                    <li class="dropdown-item">Gaseosa</li>
+                    <hr>
+                    <li class="dropdown-item">Todos</li>
+                </ul>
+            </div>
+        </div>
+        <!--Contenedor-->
+        <article class="light p-5 container-lg text-light">
+            <button onclick="openToolsFood()" class="p-3 mb-4 text-light">HERRAMIENTAS DE ALIMENTO</button>
+            <dialog id="foodTools" class="text-center shadow-lg rounded">
+                <h3>HERRAMIENTAS DE ADMINISTRADOR</h3>
+                <div class="my-3">
+                    <button onclick="openAddFood()" class="p-2 me-2 text-light">AGREGAR ALIMENTO</button>
+                    <button onclick="openEditFood()" class="p-2 ms-2 text-light">MODIFICAR ALIMENTO</button>
+                </div>
+                <button onclick="closeToolsFood()" class="p-2 text-light">VOLVER</button>
+            </dialog>
+            <dialog id="addFood" class="text-center shadow-lg rounded">
+                <div class="text-start">
+                    <span onclick="closeAddFood()" class="btn-close" type="button"></span>
+                </div>
+                <div class="container-fluid">
+                    <h3>AGREGAR ALIMENTO</h3>
+                    <hr>
+                    <form action="/food/add" method="post" enctype="multipart/form-data">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6 p-3 pe-5">
+                                    <input type="file" name="foodImage" id="foodImage" accept="image/*">
+                                    <div class="my-3">
+                                        <label for="name_food">NOMBRE DEL ALIMENTO</label>
+                                        <input type="text" name="name_food" id="name_food" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 p-3 ps-5">
+                                    <div class="mb-3">
+                                        <label for="ingredients">INGREDIENTES</label>
+                                        <br>
+                                        <small>*cada ingrediente debe de estar separado por una coma</small> 
+                                        <br>
+                                        <input type="text" name="ingredients" id="ingredients" placeholder="ejemplo: arroz , papa , carne molida" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="name_typeFood">TIPO DE ALIMENTO</label>
+                                        <select name="name_typeFood" id="name_typeFood" class="form-control" required>
+                                            <option value="Carta">Carta</option>
+                                            <option value="Corriente">Corriente</option>
+                                            <option value="Especial">Especial</option>
+                                            <option value="Bebida natural">Bebida natural</option>
+                                            <option value="Bebida gaseosa">Bebida gaseosa</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="value_food">VALOR</label>
+                                        <input type="number" name="value_food" id="value_food" class="form-control" required>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        <button type="submit" class="mb-2 p-2 text-light">AGREGAR</button>
+                    </form>
+                </div>
+            </dialog>
+            <dialog id="editFood" class="text-center shadow-lg rounded">
+                <div class="text-start">
+                    <span onclick="closeEditFood()" class="btn-close" type="button" ></span>
+                </div>
+                <div class="my-3">
+                    <h3>MODIFICAR ALIMENTO</h3>
+                </div>
+                <hr>
+                {{#each foods}}
+                    <div class="container-fluid shadow my-5 py-4 px-5">
+                        <div class="row">
+                            <div class="col-lg-4 text-center">
+                                <img src="{{url_image}}" alt="{{name_food}}" class="prealimento img-fluid" style="max-width: 120px; max-height: 120px">
+                            </div>
+                            <div class="col-lg-4 text-start">
+                                <h3>{{name_food}}</h3>
+                                <p><small>{{ingredients}}</small></p>
+                                <p><small>Tipo: {{name_typeFood}}</small></p>
+                                <p><small>${{value_food}}</small></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="/food/remove/{{id_food}}" class="btn btn-danger">ELIMINAR ALIMENTO</a>
+                                <br>
+                                <a href="/food/edit/{{id_food}}" class="btn shadow my-5">EDITAR ALIMENTO</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{else}}
+
+                    <h1><strong>NO HAY ALIMENTOS PARA MODIFICAR.</strong></h1>
+                    
+                {{/each}}
+            </dialog>
+
+            {{#each foods}}
+                <article class="dark p-5 mb-5 shadow">
+                   <div class="row">
+                       <div class="col-lg-4 text-center">
+                            <img src="{{url_image}}" alt="{{name_food}}" class="prealimento img-fluid" style="max-height: 200px; max-width: 200px;">
+                       </div>
+                       <div class="col-lg-7 my-3">
+                            <h3 class="title"><strong>{{name_food}}</strong></h3>
+                            <div class="ingredients">
+                                <ul class="listIngredients">
+                                    <li class="ingredient">{{ingredients}}</li>
+                                </ul>
+                                <p>Tipo: {{name_typeFood}}</p>
+                            </div>
+                            <strong>VALOR: <span>${{value_food}}</span></strong>
+                        </div>
+                        <div class="my-3 text-center">
+                            <!--Solicitar al usuario escanear código de la mesa-->
+                            <button class="text-light p-2" onclick="openCountPP()">REALIZAR PEDIDO</button>
+                        </div>
+                   </div> 
+                </article>
+
+                {{else}}
+
+                <article class="dark p-5 mb-5 shadow">
+                    <h1 class="text-light"><strong>NO HAY ALIMENTOS POR EL MOMENTO.</strong></h1>
+                </article>
+            {{/each}}
+            
+            <dialog id="count" class="text-center shadow-lg rounded">
+                <h3>CANTIDAD</h3>
+                <small class="text-danger adviceCount">La cantidad es muy grande.</small>
+                <div class="row my-3">
+                    <div class="col-4">
+                        <button class="bg-secondary" id="less"> < </button>
+                    </div>
+                    <div class="col-4"> <span class="numCount">0</span></div>
+                    <div class="col-4">
+                        <button class="bg-secondary" id="plus"> > </button>
+                    </div>
+                </div>
+                <form action="/send" method="post">
+                    <button class="p-2 text-light">LISTAR PEDIDO</button>
+                </form>
+                <button class="p-2 text-light mt-2" onclick="closeCountPP()">VOLVER</button>
+            </dialog>
+        </article>
+    </div>
+</main>

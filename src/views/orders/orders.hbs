@@ -1,0 +1,66 @@
+<main class="py-5 px-5">
+    <h1 class="text-center"><strong>PEDIDOS</strong></h1>
+    <div class="row aling-center mt-5">
+        <aside class="col-lg-5 p-4">
+            <div class="rounded shadow-lg p-4">
+                <p><strong>CANTIDAD DE PEDIDOS:</strong> <span>X</span></p>
+                <p><strong>TOTAL:</strong> $<span>XX</span></p>
+                <div class="text-center">
+                    <button class="text-white p-2 btn-primary">REALIZAR PEDIDO</button>
+                </div>    
+            </div>
+            <div class="mt-4 p-4 rounded shadow-lg">
+                <div class="text-center">
+                    <button class="text-white p-3 btn-primary">
+                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <strong>GENERAR FACTURA</strong>
+                    </button>
+                </div>
+                <div class="text-center mt-3">
+                    <button class="p-3 text-white btn-primary" onclick="openPayTypesPP()">
+                        <i class="bi bi-credit-card-fill"></i>
+                        <strong>REALIZAR PAGO DIGITAL</strong>
+                    </button>
+                    
+                </div>
+            </div>
+            <dialog id="payTypesPopup" class="rounded shadow-lg p-5">
+                <h1><strong>PAGAR POR:</strong></h1>
+                <small>Escoja el medio de pago de su preferencia.</small>
+                <!--Logos sacados de Seeklogo: https://seeklogo.com/-->
+                <div class="row my-3 text-center">
+                    <div class="col-lg-3 py-3">
+                        <button class="p-2 select btn-primary" style="width: 100px; height: 100px;">
+                            <img src="files/svg/commertialBrands/nequi.svg" alt="Nequi" width="80">
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button class="p-2 select btn-primary" style="width: 100px; height: 100px;">
+                            <img src="files/svg/commertialBrands/daviplata.svg" alt="Daviplata" width="80">
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button class="p-2 select btn-primary" style="width: 100px; height: 100px;">
+                            <img src="files/svg/commertialBrands/paypal.svg" alt="Paypal" width="80">
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button class="p-2 select btn-primary text-white" style="width: 100px; height: 100px;">
+                            PSE
+                        </button>
+                    </div>
+                </div>
+                <button class="text-white p-2 btn-primary" onclick="closePayTypesPP()">
+                    VOLVER
+                </button>
+            </dialog>
+        </aside>
+
+        
+        <article class="col-lg-7 p-5 light rounded shadow-lg">
+            
+            {{!-- hacer componente con base a la base de datos --}}
+
+        </article>
+    </div>
+</main>

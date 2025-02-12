@@ -1,0 +1,18 @@
+.input {
+	background: #e0a1f0;
+	border-radius: 15px;
+	border: solid 0;
+	padding: 5px;
+}
+
+.previewFood {
+	object-fit: cover;
+}
+
+.listIngredients {
+	list-style: none;
+}
+
+.ingredients {
+	display: inline;
+}

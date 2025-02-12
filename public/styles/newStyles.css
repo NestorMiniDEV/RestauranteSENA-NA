@@ -1,0 +1,22 @@
+.novedad {
+	margin: 15vh 0;
+	color: #fff;
+	border-radius: 15px;
+	background: #716ddfff;
+	box-shadow: 0 0 15px #888;
+}
+
+.encabezado {
+	padding: 5vh;
+	border-radius: 10px 10px 0 0;
+	background: #2a295b;
+}
+
+.cuerpo {
+	padding: 10vh 5vh;
+}
+
+.piepagina {
+	padding: 0 0 2vh 5vh;
+	color: #fff;
+}

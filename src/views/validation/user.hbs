@@ -1,0 +1,364 @@
+<main class="py-5 px-5 m-4">
+  <div class="row mb-5">
+    <div class="col-lg-3 text-center">
+      <i class="bi bi-person-circle" style="font-size: 120px;"></i>
+    </div>
+    <div class="col-lg-auto text_uppercase">
+      <span><strong>{{users.first_name}} {{user.last_name}}</strong></span>
+    </div>
+  </div>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+        >
+          <strong>DATOS PERSONALES</strong>
+        </button>
+      </h2>
+      <div
+        class="accordion-collapse collapse show"
+        id="collapseOne"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body py-5">
+          <ul>
+            <li class="row">
+              <div class="col-lg-3">
+                Número de documento:
+              </div>
+              <div class="col-lg-auto">
+                <span>{{user.document_user}}</span>
+              </div>
+            </li>
+            <li class="row">
+              <div class="col-lg-3">
+                Apellido del usuario:
+              </div>
+              <div class="col-lg-auto">
+                <span>{{user.last_name}}</span>
+              </div>
+            </li>
+            <li class="row">
+              <div class="col-lg-3">
+                Fecha de nacimiento:
+              </div>
+              <div class="col-lg-auto">
+                <span>{{user.born_year}}</span>
+              </div>
+            </li>
+            <li class="row">
+              <div class="col-lg-3">
+                Correo electrónico:
+              </div>
+              <div class="col-lg-auto">
+                <span>{{user.email_address}}</span>
+              </div>
+            </li>
+            <hr />
+            <li class="row">
+              <div class="col-lg-3">
+                Número de teléfono:
+              </div>
+              <div class="col-lg-auto">
+                <span>{{user.phonenumber}}</span>
+              </div>
+            </li>
+            <li class="row">
+              <div class="col-lg-3">
+                Ubicación de la mesa:
+              </div>
+              <div class="col-lg-auto">
+                <span>mesa no asignada</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+        >
+          <strong>ACTUALIZAR DATOS</strong>
+        </button>
+      </h2>
+      <!--Actualización de datos-->
+      <div
+        class="accordion-collapse collapse"
+        id="collapseTwo"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body py-5">
+          <form action="/user/editData" method="post">
+            <div class="row mb-3">
+              <div class="col-lg-4 text-center">
+                <label>
+                  <strong>NÚMERO DE DOCUMENTO:</strong>
+                </label>
+              </div>
+              <div class="col-lg-7">
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="{{user.document_user}}"
+                  disabled
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-4 text-center">
+                <label for="first_name">
+                  <strong>NOMBRE DEL USUARIO:</strong>
+                </label>
+              </div>
+              <div class="col-lg-7">
+                <input
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  value="{{user.first_name}}"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-4 text-center">
+                <label for="last_name">
+                  <strong>APELLIDO DEL USUARIO:</strong>
+                </label>
+              </div>
+              <div class="col-lg-7">
+                <input
+                  type="text"
+                  id="last_name"
+                  name="last_name"
+                  value="{{user.last_name}}"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-4 text-center">
+                <label for="email_address">
+                  <strong>CORREO ELECTRÓNICO:</strong>
+                </label>
+              </div>
+              <div class="col-lg-7">
+                <input
+                  type="email"
+                  id="email_address"
+                  name="email_address"
+                  value="{{user.email_address}}"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-4 text-center">
+                <label for="phonenumber">
+                  <strong>NÚMERO DE TELÉFONO:</strong>
+                </label>
+              </div>
+              <div class="col-lg-7">
+                <input
+                  type="number"
+                  id="phonenumber"
+                  name="phonenumber"
+                  value="{{user.phonenumber}}"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="col-lg-4 text-center">
+                <label>
+                  <strong>FECHA DE NACIMIENTO:</strong>
+                </label>
+              </div>
+              <div class="col-lg-7">
+                <input
+                  type="date"
+                  class="form-control"
+                  placeholder="{{user.born_year}}"
+                  disabled
+                />
+              </div>
+            </div>
+            <hr />
+            <p class="text-center mt-5">Ingrese su número de documento para
+              confirmar los cambios.</p>
+            <div class="row mt-3">
+              <div class="col-lg-4 text-center mt-3">
+                <label for="document_user">
+                  <strong>NÚMERO DE DOCUMENTO:</strong>
+                </label>
+              </div>
+              <div class="col-lg-7">
+                <input
+                  type="number"
+                  id="document_user"
+                  name="document_user"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="text-center">
+              <button class="p-3 mt-3 text-center text-white btn-primary">ACTUALIZAR DATOS</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseThree"
+          aria-expanded="false"
+          aria-controls="collapseThree"
+        >
+          <strong>CAMBIAR CONTRASEÑA</strong>
+        </button>
+      </h2>
+      <!--Cambio de contraseña-->
+      <div
+        class="accordion-collapse collapse"
+        id="collapseThree"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body py-5">
+          <form action="/changePass" method="post">
+            <div class="row mb-3">
+              <div class="col-lg-4 text-center">
+                <label for="lastPassword">
+                  <strong>CONTRASEÑA ANTIGUA:</strong>
+                </label>
+              </div>
+              <div class="col-lg-7">
+                <input
+                  type="password"
+                  id="lastPassword"
+                  name="lastPassword"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-4 text-center">
+                <label for="newPassword">
+                  <strong>CONTRASEÑA NUEVA:</strong>
+                </label>
+              </div>
+              <div class="col-lg-7">
+                <input
+                  type="password"
+                  id="newPassword"
+                  name="newPassword"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-4 text-center">
+                <label for="confirmNewPassword">
+                  <strong>CONFIRMACIÓN DE CONTRASEÑA:</strong>
+                </label>
+              </div>
+              <div class="col-lg-7">
+                <input
+                  type="password"
+                  id="confirmNewPassword"
+                  name="confirmNewPassword"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="text-center mt-5">
+              <button class="text-light p-3 btn-primary">REALIZAR CAMBIO</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseFour"
+          aria-expanded="false"
+          aria-controls="collapseFour"
+        >
+          <strong>ELIMINAR CUENTA</strong>
+        </button>
+      </h2>
+      <!--Eliminar cuenta-->
+      <div
+        class="accordion-collapse collapse"
+        id="collapseFour"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body py-5 text-center">
+          <p class="text-center">¿Está seguro de eliminar la cuenta? Recuerde
+            que con la cuenta eliminada, ya no podrá ingresar nuevamente a
+            esta misma cuenta.</p>
+          <button class="btn btn-danger p-3" onclick="openDeletePP()">
+            ELIMINAR CUENTA
+          </button>
+          <dialog id="deleteConf" class="rounded shadow-lg p-5">
+            <form action="/user/delete" method="post">
+              <p>Si estas seguro de eliminar esta cuenta, ingrese su número de
+                documento para confirma la eliminación de la cuenta.</p>
+              <div class="row mt-4">
+                <div class="col-lg-4 text-center">
+                  <label for="document_user">
+                    <strong>NÚMERO DE DOCUMENTO:</strong>
+                  </label>
+                </div>
+                <div class="col-lg-7">
+                  <input
+                    type="number"
+                    id="document_user"
+                    name="document_user"
+                    class="form-control"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="text-center mt-5">
+                <button class="btn btn-danger p-3">ELIMINAR CUENTA</button>
+              </div>
+            </form>
+            <button
+              class="p-3 text-light text-center"
+              onclick="closeDeletePP()"
+            >VOLVER</button>
+          </dialog>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
